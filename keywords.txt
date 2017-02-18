@@ -1,74 +1,741 @@
-VR-14 main gearbox
-VR-24 main gearbox
-TVZ-117 engine
-VR-252 main gearbox
-VSU AI-9/9V main gearbox
-VK-2500 engine
-VR-8A main gearbox
-1209G Angular velocity roll sensor 
-1209E Angular velocity pitch sensor 
-1-4-4 Extinguisher 
-2VG-15K-2S Switch 
-5747T Temperature indicator
-768600MA Valve 
-8А.4103.000-01 Strut 
-8А.4103.000-02 Strut 
-8A.5200.110.003Cable 
-8A.5200.110.017 Cable 
-8A-5200-110-15 Tail rotor control cable 
-8А6.415.007 Cable 
-8А-6314-00 Cardan shaft 
-8АТ-0200-00-63 Glazing 
-8АТ-0200-00-64 Glazing 
-8АТ-0200-00-65 Glazing 
-8AT-2710-00 Main rotor blades
-8АТ-7205-540 Wiper blade 
-8АТ-7205-543 Brush 
-8AT-7420 Tail rotor current collector 
-94DN Electro magnet 
-APD-9V Engine automatic start panel 
-APP-1M-3 Inverter switch unit 
-APSH-3M Bus selector switch 
-AS-1 Matching automatic device 
-BKK-18 Lurching monitor unit 
-VD-10VK series 2 Altimeter 
-GA-192/2 Electromagnetic faucet 
-GA-59/1 Emergency power valve -off 
-GA77V Electromagnetic valve 
-GSSH-A-18 RL.3.849.023 Headset 
-DV-302T Electric fan 
-DSL-40T Ice sensor 
-DTE-1 Tachometer 
-ID-100 Induction sensor gauge 
-ID-3 Inductive pressure sensor 
-IMD-8 Induction manometer sensor 
-ITE-1 Indicator rotor rpm 
-KAU-115AM Combined control unit 
-KOCH-1A-2s Relay box 
-KP-9V air bleed valve 
-KR-12SI Coil 
-LFS-PS 27-450 Headlamp 
-MV-03-1 Piezoelectric sensor with cable 
-MSTV-2.5S Alarming 
-MU-615 A series 1 Angular movement sensor 
-NSH39M Pump 
-P-77 var.2 Pick-up temperature 
-PVD-6M Pitot 
-PK2S-2V Button 
-PMK-21TV-3S program controlled mechanism 
-Priboy-2s Battery
-R-855 A1 Radio 
-SKES-2027B Fuel meter 
-SNP-1 Power supply outage indicator
-SSP-FK-BI ser.2 Fire alam unit 
-TKD12PODG Contctor 
-TKE54PODG Relay 
-TKS103DOD Contactor 
-TKS133DOD Contactor 
-TN-115-7.5 Transformer 
-TS-1/2-2S Transformer 
-TER-1M Temperature regulator 
-UP03/2M Reducing accelerator 
-USS-6 series 2 Engine linkage unit 
-XS-39 Light assy-strobe 
-EMT-2M electromagnetic brake
+methane alarm
+firedamp alarm
+miniature methanometer
+portable methanometer
+regenerative respirator for auxiliary mine rescue teams
+self-rescue apparatus
+automated timbering
+automatic control systems and automation equipment
+button control station
+chemical gas analyzer
+coal pumping unit 
+coal pump
+complex of equipment for pumping water into a coal seam
+control equipment system
+cutting complex for combines
+cutting-up complex
+roadcutter system
+device for protection against electric shocks in contact lines of electric locomotive mine haulage
+drilling and excavating equipment
+drilling and loading machine
+drill-loader
+drilling machine with hydraulic feed
+a-cropping
+A-frame
+A-frame sill
+A-rod
+A-series
+A-Sized Roller Latch Assembly Tool
+abacus
+abandoned mine
+abandoned place
+abandoned well
+abandoned workings
+abandonment
+abandonment of holes
+abate
+ABC
+ABC of mining
+Abel closed tester
+abelite
+ability to fill openings
+ability to penetrate
+ablation
+ablation depth
+abnormal contact
+abnormal dip
+abnormal stress
+above datum height
+above ground
+above sea level height
+abradant
+abrasibility
+abrasion
+abrasion hardness
+abrasion resistance
+abrasion wheel
+abrasive
+abrasive formation
+abrasive resistance
+abrasive rock
+abraum salts
+abrazo plate
+abrupt
+absolute age
+absolute age determination
+absolute antenna gain
+absolute atmosphere
+absolute chronology
+absolute depth determination
+absolute duration
+absolute gas content
+absolute gravity determination
+absolute zero
+absorbent surface
+absorbing shock
+absorption analysis
+absorption oil
+absorption process
+absorption tube
+abstraction of pillar
+abundance of minerals
+abundant mineral
+abut
+abut the face
+abutment
+abutment stone
+abutting joint
+abyssinian well
+acanthite
+accelerate the setting
+accelerated oxidation test
+accelerating agent
+accelerating chemicals
+accelerating period
+accelerating stress
+acceptance test
+access crosscut
+access manway
+access to the orebody
+accessed reserves
+accessory apparatus
+accessory constituents
+accessory mineral
+accident of the ground
+accident prevention
+accident prevention and mine rescue work
+accident rate
+accident record
+accident severing
+accidental explosion
+accidental inclusion
+accidentally wounded
+acclive
+accompanying bed
+accompanying metal
+accordance of summit levels
+account valuation
+accreditation of the sample
+accretion
+accumulate
+accumulation
+accumulation of stresses
+accumulative
+accumulative formations
+accumulative leave
+accumulative percentage
+accumulator
+accumulator lamp
+accumulator loco
+accumulator locomotive
+accumulator plant
+accumulator tank
+acetify
+acetylene bucket lamp
+acetylene lamp
+acicular bismuth
+acicular shape
+acid bottle
+acid for filling up
+acid heat test
+acid mine drainage
+acid mine drainage water
+acid mine water
+acid number
+acid sludge
+acid soil
+acid tar
+acid test
+acid value
+acid-base indicator
+acid-in-oil emulsion
+acid-proof brick lining
+acid-restoring plant
+acid-treated residue
+acid-waste products
+Acidfrac emulsion
+Acidfrac process
+acidic mine drainage
+acidic rocks
+acidity
+acidity coefficient
+acidize the hole
+acidness
+acidulated water
+acidulous spring
+acidulous water
+acinose
+acinose texture
+acoustic coagulation
+acoustical well sounder
+acquittance roll
+acre
+acre-foot
+acreage per well
+acreage rent
+acrophysical survey
+across the pitch
+across the steep pitch
+across the strike
+activated
+alumina
+activated alumina
+activated plough
+activator
+active dust
+active face
+active source of dust
+active stope
+active stope area
+active support
+active working face
+actual drilling time
+actual grade recovered from an ore after processing
+actual height of ground water
+actual horsepower
+actual mining
+actual reserve
+actual running time
+actual size
+actual stress at fracture
+actuating roll
+acute peak abutment
+acute silicosis
+ad hoc
+criteria
+adamantine
+adapter
+adaptibility
+adapting pipe
+adaptor
+adarce
+added lubrication
+adding pans
+addition of clay
+addition of sand
+additional charges
+additional load
+additional ore
+additional pipe
+adequate
+adequate ventilation
+ader wax
+ADF
+adherence
+adhesion
+adhesive
+adhesive capacity
+adhesive film
+adhesive tire
+adhesive water
+adipocerite
+adit
+adit cut mining
+adit entrance
+adit entry
+adit for draining
+adit mouth
+adit portal pad
+adit window
+adit-cut mining
+adjacent
+adjacent control system
+adjacent mine
+adjacent strata
+adjacent water body
+adjoin
+adjust to zero
+adjustable
+adjustable jack
+adjustable jib
+adjustable pitch
+adjustable prop
+adjustable speed motor
+adjustable stop
+adjustable-aperture grizzly
+adjusting pan
+adjusting tool
+adjustment
+adjustment for altitude
+adjustment of mixture
+adjustment of streams
+adjustment ring
+adjutage
+admission zero
+admitted charge
+adobe
+adobe blasting method
+adobe clay
+adobe shooting
+adsorption
+adsorption power
+adustion of timbering
+advance
+advance average value
+advance cut
+advance direction sign
+advance grouting
+advance heading
+advance in coal
+advance in synchronism
+advance increment
+advance line
+advance mining
+advance of mine explosion
+advance overburden pile
+advance per attack
+advance per round
+advance per shaker move
+advance rails
+advance support
+advance timbering
+advance to the raise
+advance warning sign
+advance waste bank
+advance workings
+advanced bore hole
+advanced by hand
+advanced heading
+advancer
+advancing
+advancing by spilling
+advancing heading
+advancing longwall
+advancing longwall system
+advancing mining
+advancing of room
+advancing of the conveyor
+advancing on strike
+advancing support
+advancing system
+advancing to the dip
+advancing to the rise
+advent time
+adventure
+adventure in a mine
+adventurer
+adversary grade
+adverse
+adverse geological conditions
+adverse grade
+adverse gradient
+adversing of load up
+Advisory Committee on Uranium Mining
+Advisory Engineering Committee
+adz
+adze
+adzing gauge
+aegerite
+AEGOS
+aeolian soil
+aeon
+aerate
+aerated solids
+aerating
+aerator
+aerator classifier
+aerial acid
+aerial cableway
+aerial conductor
+aerial dust
+aerial geophysical exploration
+aerial geophysical prospecting
+aerial mapping
+aerial photograph
+aerial spud
+aerial survey
+aerial tram
+Aero-Vibe screen
+aerodynamic diameter
+aerofloat
+aerofloc
+aerohydrous
+aerometry
+aerophor
+aerophore
+aeroplane mapping
+aeroradiornetric prospecting
+aerosol indicator
+aerosolation
+unit
+aerosolator
+aerostatic-cable
+aerostatic-cable chute
+aerugo
+aetite
+affinage
+affinity
+affluent
+afford access
+affording access
+afloat
+afr breaking
+afr-fed
+African Geological Services Association
+African-European Georesources Observation System
+aft support
+after
+after the same pattern
+after-damp
+after-part of dredge
+after-shock
+after-treatment
+aftercooler
+afterdamp
+aftergases
+aftergranite
+afternoon shift
+aftershock
+aftertreatment
+AG mill
+agalmatolite
+age determination
+age groups
+age hardening
+age of deposition
+age-strength relation
+agent
+agglomerate
+agglomerate tabling
+aggradation
+aggrade
+aggregate
+aggregate area of wires
+aggregate averaging
+aggregate feeding
+aggregate size
+aggregate strength
+aggregate test
+aggregate thickness
+aggregate voidage
+aggremeter
+aggressive waters
+AGIP
+agitair machine
+agitating
+agitation
+agitation of mix
+agitation shaft
+agitator
+agitator shaft
+Agnew cut
+Agnotozoic era
+agonic line
+agreed
+agricultural limestone
+air adit
+air bar
+air barrage
+air basket
+air blast
+air blast transformer
+air blaster
+air blasting
+air blow
+air blowpipe
+air bottle
+air break-through
+air breaker
+air breaker shell
+air breaking installation
+air brick
+air bridge
+air burst
+air cell
+air cement gun
+air chain block
+air chamber
+air chipper
+air circulation
+air cleaning
+air column
+air compartment
+air
+conditioning belt
+air conduit
+air connection
+air control grip
+air conveying
+air course
+air coursing
+air cross-cut
+air crosscut
+air crossing
+air curing
+air current
+air curtain
+air cushion
+air dam
+air deck
+air delivery
+air discharge
+air door
+air dried
+air drill
+air drilling
+air drive
+air duct
+air edds
+air end
+air entrainment
+air flow
+air flow-back
+air funnel
+air gap
+air gas
+air gate
+air gun
+air hammer
+air hardening
+air heating
+air hole
+air ing attachment
+air inleakage
+air inlet nipple
+air intake
+air junction
+air lock
+air locks
+air loco
+air man
+air mask
+air measurement
+air metering
+air network
+air offtake
+air operated driller's panel
+air ort
+air output
+air oven
+air panel
+air partition
+air passages
+air percolator
+air pipe
+air piping
+air pit
+air pocket
+air production
+air prospecting
+air refrigeration
+air return way
+air room
+air saddle
+air sampler
+air seepage
+air selection
+air separation
+air shaft
+air sheet
+air shooter
+air sinker
+air sizing
+air slack
+air slake
+air sluice
+air sollar
+air space
+air speed indicator
+air split
+air stack
+air staple
+air staple shaft
+air stopping
+air supply
+air survey
+air table
+air trammer
+air trunk
+air tube
+air tugger
+air vent
+air vessel
+air void
+air way
+air winze
+air working
+air-activated gate
+air-and-water spray
+air-and-water throttle
+air-blast cleaning
+air-blast goaf-stowing machine
+air-blown asphalt
+air-borne dust
+air-brake hose
+air-classifying system
+air-core electromagnetic contactor
+air-course
+air-curtain technique in blasting
+air-deck
+air-door tender
+air-drifter drill
+air-drilling
+air-driven hoist
+air-driven mine car loader
+air-driven pump
+air-driven wrench
+air-dump car
+air-end way
+air-entrained
+concrete
+air-escape pipe
+air-feed
+air-feed drifter
+air-feed drill
+air-feed leg drill
+air-feed stoper
+air-float pneumatic table
+air-flow liquid level gauge
+air-flow measurement
+air-flow resistance
+air-flush drilling
+air-gate
+air-gravel concrete
+air-hammer
+air-jet dispersion
+air-leg drilling
+air-level
+air-lift
+air-lift floatation machine
+air-lift machine
+air-line
+air-line oiler
+air-line respirator
+air-lock system
+air-measurement book
+air-measuring station
+air-motor driven jumbo
+air-motor-powered
+air-off
+air-on
+air-operate
+air-operated
+air-operated crawler-type loader
+air-operated dump d-door
+air-operated gate
+air-operated grab
+air-operated pump
+air-passage
+air-permeability method
+air-permissible explosives
+air-permitted explosives
+air-plunger pump
+air-powered
+air-sampling vessel
+air-seasoned
+air-separation
+air-shaft tipple
+air-shooting
+air-splitting
+air-sweeping
+air-tight stopping
+air-vane
+air-water blast spray
+air-water interface
+air-water spray
+air-wave
+airborne
+airborne contaminants
+airborne dust survey
+airborne electromagnetic survey
+airborne geophysical exploration
+airborne instrumentation
+airborne mineralogical search
+airborne respirable dust
+airborne survey
+airbreaker
+aircock
+aircourse
+airdox
+airdox blaster
+airdox cylinder
+airdust sampler
+airfield landing mat
+airfloccule
+airleg-mounted
+airless
+airless end
+airlift
+airlock door
+airman
+airmeter
+airshaft
+airslusher
+airsplit
+airstream
+airtight partition
+airtight seal
+airtightness tester
+airway
+airway cross section
+airway level
+airway stopping
+airways intersection
+airwinch
+AISC Costs
+Akins classifier
+akremite
+Al Khlata
+Al OH 3
+Alabama iron ore
+alabandite
+alar prolongation
+alarm barometer
+alarm bell
+alarm gong
+alarm prop
+alarm-apparatus
+alaskaite
+alaunstein
+Albert lay
+albertite
+Albian stage
+albite
+albite law
+albolite
+albolith
+alcali
+alcohol lamp
+Aldermac method
+Algonkian
+alidade rule
+align
+alignment
+alignment sight with self-aligning sighting line
+alignment with
+alimentary silicosis
+alios
+aliquot
+alit
+alite
+alkali liquor
+alkali wash
+alkali-type
+alkalimeter
+alkaline battery
+alkyl
+xanthate
+all employed output per manshift
+all the way down
+all work
+all-belt mine
+all-belt-drift mine
+all-conveyer
+all-electric colliery
+all-floatation process
+all-glass pneumatic cell
+all-in aggregate
+all-over
+all-over work
+all-purpose bit
+all-round method
+all-round miner
+all-round price
+all-round transporter
+All-Russian Research Institute of Mining Geomechanics and Survey
+all-sliming
+all-steel
+all-steel rotary hose
+all-timber
+all-ups
+all-weather
