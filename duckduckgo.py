@@ -1,4 +1,4 @@
-# import psycopg2
+import psycopg2
 import pandas as pd
 from io import StringIO
 from lxml import etree
@@ -9,22 +9,42 @@ from sqlalchemy import create_engine
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
-#
-all_links = []
+
+
+engine = create_engine(
+    'postgresql://textminer:Infrared spectroscopy@ec2-54-202-180-1.us-west-2.compute.amazonaws.com:5432/pdfs')
+
+DB = {
+    'drivername': 'postgres',
+    'database': 'pdfs',
+    'host': 'ec2-54-202-180-1.us-west-2.compute.amazonaws.com',
+    'port': '5432',
+    'username': 'textminer',
+    'password': "'Infrared spectroscopy'"
+}
+
+dsn = "host={} dbname={} user={} password={}".format(DB['host'],
+                                                     DB['database'],
+                                                     DB['username'],
+                                                     DB['password'])
+connection = psycopg2.connect(dsn)
+cur = connection.cursor()
+
+TOPIC = 'mining'
 key_df = pd.read_csv('/home/user/PycharmProjects/Selenium/keywords.txt', sep=',', header=None)
 keywords = key_df[0].tolist()
 parser = etree.HTMLParser()
 binary = FirefoxBinary('/usr/bin/firefox')
 fp = webdriver.FirefoxProfile('/home/user/.mozilla/firefox/vmofja5l.default/')
 browser = webdriver.Firefox(firefox_profile=fp, firefox_binary=binary)
-search_engine = "https://duckduckgo.com/"
-browser.get(search_engine)
+SEARCH_ENGINE = "https://duckduckgo.com/"
+browser.get(SEARCH_ENGINE)
 page = 0
-empty = []
-table = pd.DataFrame(empty)
-writer = pd.ExcelWriter('/home/user/PycharmProjects/Selenium/PDF_links/duck_duck_go.xlsx')
-table.to_excel(writer, 'links', index=False)
-writer.save()
+# empty = []
+# table = pd.DataFrame(empty)
+# writer = pd.ExcelWriter('/home/user/PycharmProjects/Selenium/PDF_links/duck_duck_go.xlsx')
+# table.to_excel(writer, 'links', index=False)
+# writer.save()
 
 for a_keyword in keywords:
     elem = browser.find_element_by_name("q")
@@ -34,13 +54,8 @@ for a_keyword in keywords:
     elem.send_keys(Keys.RETURN)
     sleep(randint(3, 5))
     assert "No results found." not in browser.page_source
-    print("We have typed the keyword")
     dict_links = []
-    _next_page_exist = True
-    print("Kukusiki!")
-    _all_links = all_links
-    print("_all_links = ", _all_links)
-    print("dict_links = ", dict_links)
+    all_links = []
     lenOfPage = browser.execute_script(
         "window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;")
     match = False
@@ -51,9 +66,6 @@ for a_keyword in keywords:
             "window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;")
         if lastCount == lenOfPage:
             match = True
-    print('next_page_exist is {0}'.format(_next_page_exist))
-    print("_all_links = ", _all_links)
-    print("dict_links = ", dict_links)
     page_xml = browser.page_source
     tree = etree.parse(StringIO(page_xml), parser)
     pdfki = tree.xpath(".//div[@class='result results_links_deep highlight_d']")
@@ -61,7 +73,7 @@ for a_keyword in keywords:
             ".//div[@class='result results_links_deep highlight_d']//h2/a[@href][1]"))):
         print(a_link, "  ", ''.join(pdfki[a_link].xpath(".//h2/a[1]/@href")))
         if '.pdf' in ''.join(pdfki[a_link].xpath(".//h2/a[1]/@href")):
-            if ''.join(pdfki[a_link].xpath(".//h2/a[1]/@href")) not in _all_links:
+            if ''.join(pdfki[a_link].xpath(".//h2/a[1]/@href")) not in all_links:
                 print(a_link)
                 print(''.join(pdfki[a_link].xpath(".//h2/a[1]/@href")),
                       '\n',
@@ -69,23 +81,36 @@ for a_keyword in keywords:
                       ''.join(pdfki[a_link].xpath(".//h2/a[1]/text()")),
                       '\n',
                       ''.join(pdfki[a_link].xpath('.//div[@class="result__snippet"]/*/text()|.//div[@class="result__snippet"]/text()')))
-                _all_links.append(''.join(pdfki[a_link].xpath(".//h2/a[1]/@href")))
+                all_links.append(''.join(pdfki[a_link].xpath(".//h2/a[1]/@href")))
                 dict_links.append({'pdf_link': ''.join(pdfki[a_link].xpath(".//h2/a[1]/@href")),
+                                   'keyword': a_keyword,
+                                   'google_page': '-',
+                                   'result_stats': '',
                                    'title': ''.join(pdfki[a_link].xpath(".//h2/a[1]/text()")),
+                                   'author_and_date': '',
                                    'pdf_snippets': ' '.join(
                                        pdfki[a_link].xpath(
                                            './/div[@class="result__snippet"]/*/text()|.//div[@class="result__snippet"]/text()')),
-                                   'keyword': a_keyword,
-                                   'search_engine': search_engine})
-    excel = pd.ExcelFile('/home/user/PycharmProjects/Selenium/PDF_links/duck_duck_go.xlsx')
-    exceltable = excel.parse('links')
-    table3 = pd.DataFrame(dict_links)
-    writer3 = pd.ExcelWriter('/home/user/PycharmProjects/Selenium/PDF_links/duck_duck_go.xlsx', engine='openpyxl')
-    concat = pd.concat([exceltable, table3], ignore_index=True)
-    concat.to_excel(writer3, 'links', index=False,
-                    columns=['search_engine', 'pdf_link', 'keyword', 'title', 'pdf_snippets'])
-    writer3.save()
+                                   'pdf_related_articles': '',
+                                   'pdf_cited_by': '',
+                                   'search_engine': SEARCH_ENGINE,
+                                   'topic': TOPIC})
+    sql_table = pd.DataFrame(dict_links)
+    dict_links = []
+    sql_table.to_sql('google_pdfs', engine, if_exists='append', index=False)
+    # excel = pd.ExcelFile('/home/user/PycharmProjects/Selenium/PDF_links/duck_duck_go.xlsx')
+    # exceltable = excel.parse('links')
+    # table3 = pd.DataFrame(dict_links)
+    # writer3 = pd.ExcelWriter('/home/user/PycharmProjects/Selenium/PDF_links/duck_duck_go.xlsx', engine='openpyxl')
+    # concat = pd.concat([exceltable, table3], ignore_index=True)
+    # concat.to_excel(writer3, 'links', index=False,
+    #                 columns=['search_engine', 'topic','pdf_link', 'keyword', 'title', 'pdf_snippets'])
+    # writer3.save()
     sleep(randint(20, 30))
+
+cur.close()
+connection.close()
+
 
 # cur.close()
 # connection.close()
