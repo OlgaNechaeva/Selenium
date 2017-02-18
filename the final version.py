@@ -23,14 +23,18 @@ def renew_tor():
 #     browser.get('http://www.whatsmyip.org/')
 
 
-def google_pdf_parser(dict_links, all_links, page, parser, error_appears, engine,
+def google_pdf_parser(all_links, page, parser, error_appears, engine,
                       browser, a_keyword):
+    dict_links = []
     _next_page_exist = True
     print("Kukusiki!")
     _all_links = all_links
-    _dict_links = dict_links
+    print("_all_links = ", _all_links)
+    print("dict_links = ", dict_links)
     while _next_page_exist:
         print('next_page_exist is {0}'.format(_next_page_exist))
+        print("_all_links = ", _all_links)
+        print("dict_links = ", dict_links)
         try:
             page += 1
             page_xml = browser.page_source
@@ -56,7 +60,7 @@ def google_pdf_parser(dict_links, all_links, page, parser, error_appears, engine
                                   './/div[@class="f slp"]/a[@href][contains(text(), "Cited by")]/@href'),
                               '\n')
                         _all_links.append(''.join(pdfki[a_link].xpath(".//h3/a/@href")))
-                        _dict_links.append({'pdf_link': ''.join(pdfki[a_link].xpath(".//h3/a/@href")),
+                        dict_links.append({'pdf_link': ''.join(pdfki[a_link].xpath(".//h3/a/@href")),
                                            'title': ''.join(pdfki[a_link].xpath(".//h3/a[@href]/text()")),
                                            'google_page': page,
                                            'author_and_date': ''.join(
@@ -69,8 +73,8 @@ def google_pdf_parser(dict_links, all_links, page, parser, error_appears, engine
                                            'pdf_snippets': ' '.join(
                                                pdfki[a_link].xpath('.//span[@class = "st"]/text()')),
                                            'keyword': a_keyword})
-            sql_table = pd.DataFrame(_dict_links)
-            _dict_links = []
+            sql_table = pd.DataFrame(dict_links)
+            dict_links = []
             sql_table.to_sql('google_pdfs', engine, if_exists='append', index=False)
             button = browser.find_element_by_xpath('//div[@id="foot"]//span[text()="Next"]')
             button.click()
@@ -82,16 +86,15 @@ def google_pdf_parser(dict_links, all_links, page, parser, error_appears, engine
             tree_1 = etree.parse(StringIO(page_xml_1), parser)
             I_am_not_a_robot = tree_1.xpath('//*[@id = "g-recaptcha-response"]')
             print(I_am_not_a_robot)
-            if I_am_not_a_robot != []:
+            if len(I_am_not_a_robot) != 0:
                 print('I have got a captcha!')
                 sleep(randint(45, 60))
                 I_am_not_a_robot = []
                 print('We solve the captcha! We are good!', '\n', 'I_am_not_a_robot = ', I_am_not_a_robot)
-                _dict_links = []
-                error_appears, _all_links = google_pdf_parser(_dict_links, _all_links, page, parser,
+                error_appears, _all_links = google_pdf_parser(_all_links, page, parser,
                                                              error_appears, engine,
                                                              browser, a_keyword)
-            elif tree_1.xpath('.//text()[contains(.,"s an error.")]') != []:
+            elif len(tree_1.xpath('.//text()[contains(.,"s an error.")]')) != 0:
                 print('We have got an error. It is needed to be solved.')
                 error_appears = True
                 _next_page_exist = False
@@ -101,18 +104,17 @@ def google_pdf_parser(dict_links, all_links, page, parser, error_appears, engine
                 print('Let us check if any error appears!')
                 page_xml_2 = browser.page_source
                 tree_2 = etree.parse(StringIO(page_xml_2), parser)
-                if tree_2.xpath('.//text()[contains(.,"s an error.")]') != [] and tree_2.xpath(
-                        ".//div[@class='g']//h3/a[@href]") == []:
+                if len(tree_2.xpath('.//text()[contains(.,"s an error.")]')) != 0 and len(tree_2.xpath(
+                        ".//div[@class='g']//h3/a[@href]")) == 0:
                     print("Again an error...")
-                    _dict_links = []
-                    error_appears, _all_links = google_pdf_parser(_dict_links, _all_links, page,
+                    error_appears, _all_links = google_pdf_parser(_all_links, page,
                                                                  parser, error_appears, engine,
                                                                  browser, a_keyword)
                     error_appears = True
                 print('next_page_exist is {0}'.format(_next_page_exist))
                 print("No. There is no error.")
                 _next_page_exist = False
-                print("Another keyword is coming!", "\n", "dict_links= ", _dict_links, "\n", "next_page_exist = ",
+                print("Another keyword is coming!", "\n", "dict_links= ", dict_links, "\n", "next_page_exist = ",
                       _next_page_exist)
                 print('next_page_exist is {0}'.format(_next_page_exist))
     return error_appears, _all_links
@@ -135,14 +137,13 @@ def browser_run(a_keyword, parser, engine):
     sleep(randint(3, 5))
     assert "No results found." not in browser.page_source
     print("We have typed the keyword")
-    dict_links = []
-    error, all_links = google_pdf_parser(dict_links, all_links, page,
+    error, all_links = google_pdf_parser(all_links, page,
                                          parser, error, engine, browser, a_keyword)
     print("%s keyword has been captured!" % a_keyword)
+    sleep(3)
     print("We are going to close the browser!")
     browser.quit()
     if error:
-        browser.quit()
         print("Is an error? ", error, "\n", "We are going to change IP!")
         renew_tor()
         print(a_keyword)
