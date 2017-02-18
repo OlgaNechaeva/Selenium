@@ -9,7 +9,7 @@ from sqlalchemy import create_engine
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
-#
+
 all_links = []
 key_df = pd.read_csv('/home/user/PycharmProjects/Selenium/keywords.txt', sep=',', header=None)
 keywords = key_df[0].tolist()
