@@ -1,2 +1,74 @@
-micropore metal-organic frame MOF ANG adsorbed natural gas
-absorbed natural gas desorbing device
+VR-14 main gearbox
+VR-24 main gearbox
+TVZ-117 engine
+VR-252 main gearbox
+VSU AI-9/9V main gearbox
+VK-2500 engine
+VR-8A main gearbox
+1209G Angular velocity roll sensor 
+1209E Angular velocity pitch sensor 
+1-4-4 Extinguisher 
+2VG-15K-2S Switch 
+5747T Temperature indicator
+768600MA Valve 
+8А.4103.000-01 Strut 
+8А.4103.000-02 Strut 
+8A.5200.110.003Cable 
+8A.5200.110.017 Cable 
+8A-5200-110-15 Tail rotor control cable 
+8А6.415.007 Cable 
+8А-6314-00 Cardan shaft 
+8АТ-0200-00-63 Glazing 
+8АТ-0200-00-64 Glazing 
+8АТ-0200-00-65 Glazing 
+8AT-2710-00 Main rotor blades
+8АТ-7205-540 Wiper blade 
+8АТ-7205-543 Brush 
+8AT-7420 Tail rotor current collector 
+94DN Electro magnet 
+APD-9V Engine automatic start panel 
+APP-1M-3 Inverter switch unit 
+APSH-3M Bus selector switch 
+AS-1 Matching automatic device 
+BKK-18 Lurching monitor unit 
+VD-10VK series 2 Altimeter 
+GA-192/2 Electromagnetic faucet 
+GA-59/1 Emergency power valve -off 
+GA77V Electromagnetic valve 
+GSSH-A-18 RL.3.849.023 Headset 
+DV-302T Electric fan 
+DSL-40T Ice sensor 
+DTE-1 Tachometer 
+ID-100 Induction sensor gauge 
+ID-3 Inductive pressure sensor 
+IMD-8 Induction manometer sensor 
+ITE-1 Indicator rotor rpm 
+KAU-115AM Combined control unit 
+KOCH-1A-2s Relay box 
+KP-9V air bleed valve 
+KR-12SI Coil 
+LFS-PS 27-450 Headlamp 
+MV-03-1 Piezoelectric sensor with cable 
+MSTV-2.5S Alarming 
+MU-615 A series 1 Angular movement sensor 
+NSH39M Pump 
+P-77 var.2 Pick-up temperature 
+PVD-6M Pitot 
+PK2S-2V Button 
+PMK-21TV-3S program controlled mechanism 
+Priboy-2s Battery
+R-855 A1 Radio 
+SKES-2027B Fuel meter 
+SNP-1 Power supply outage indicator
+SSP-FK-BI ser.2 Fire alam unit 
+TKD12PODG Contctor 
+TKE54PODG Relay 
+TKS103DOD Contactor 
+TKS133DOD Contactor 
+TN-115-7.5 Transformer 
+TS-1/2-2S Transformer 
+TER-1M Temperature regulator 
+UP03/2M Reducing accelerator 
+USS-6 series 2 Engine linkage unit 
+XS-39 Light assy-strobe 
+EMT-2M electromagnetic brake

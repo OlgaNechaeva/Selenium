@@ -1,6 +1,10 @@
-cat allergy
-near fatal asthma
-Intermittent allergic rhinitis
+
+exotoxin
+animal models asthma
+eosinophil morphological changes
+#cat allergy
+#near fatal asthma
+#Intermittent allergic rhinitis
 #immune system diseases
 #methotrexate
 #granulysin
